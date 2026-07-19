@@ -1,0 +1,720 @@
+ <!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<script src="text.js"></script>
+<script src="scriipt.js"></script>
+<style>
+* {box-sizing: border-box;}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 0px 0px;
+}
+
+.header img {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 25px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header img.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header img:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.header img.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.nav-bar {
+  float: right;
+  width: 350px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .header img {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .nav-bar {
+    float: none;
+  }
+}
+</style>
+<style>
+  *
+html, body, img{
+  /*   font-size: 60px;*/
+      width: device-width;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    input{height: 40px;}
+  /*  h2 {font-size: 50px;}*/
+ 
+div.scrollmenu {
+  background-color: #ffffff;
+  overflow: auto;
+  white-space: nowrap;
+  font-size:20px;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  width: 150px;
+}
+ body {
+  font-family: 'Lato', sans-serif;
+}
+p,h2 {
+  font-size: 15px;
+}
+#myInput {
+  icon: url('image.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;.
+  top: 15px;
+  right: 35px;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+};
+  .form-container {
+      margin: 20px;
+      padding: 15px;
+      background: #8cabd2;
+      color: white;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    }
+    .input-cnt {
+      display: flex; /* display the icon and the input in a line */
+      margin-bottom: 15px;
+    }
+    .input-cnt:last-child {
+      margin-bottom: 0px;
+    }
+    .input-cnt > i {
+    min-width: 7px; /* set a minimum width for the icon */
+      padding: 10px; /* make sure the icon is centered vertically */
+      text-align: center; /* horizontally center the icon */
+      background: lightgrey;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      color: #0076ff;
+    }
+    /* change styles when focused */
+    .input-cnt:hover > i {
+      background: #0076ff;
+      color: white;
+    }
+    /* style the inputs */
+    /* style the submit button */
+    /* add a hover effect for the submit button
+    .input-cnt > input[type="submit"]:hover {
+      color: white;
+      background: #0076ff;
+    } */
+    header {
+      position: absolute;
+      text-decoration:;
+      color: #3a1cb2;
+      height:auto;
+      width: 100%;
+    }
+    header {
+      font-size: ;
+      text-align: center;
+      background: #f9fa37;
+    }
+  *{
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ffffffe7;
+    }
+    /*.nav-bar {
+      position: fixed;
+      top: 95px; /* ticks the side nav to the top */
+      left: 0px; /* sticks the side nav to the left side */
+      width: 100%;
+    }
+  header{
+      position: absolute;
+      top: 0px; /* ticks the side nav to the top */
+      left: 0px; /* sticks the side nav to the left side */
+      width:100%;  }
+ */
+    .content {
+      margin-top: 50px;
+    }
+    .content > div {
+      padding: 15px;
+    }
+    .nav-bar a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      /*height: 20px; * sets fixed height */
+      line-height: 30px; /* vertically centers the text */
+    }
+    .nav-bar > ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background: gold;
+    }
+      
+    .nav-bar > ul > li > a {
+      height: 30p;
+      color:white;
+    }
+    .nav-bar > ul > li > a:hover {
+      background: green;
+      color: #f8f9f9;
+    }
+    .nav-bar .active {
+      background: #173459;
+      color: #f8f9f9;
+    }
+    .nav-bar li {
+      height: 30px;
+      float: left;
+      width: 25%; /* 100% / 4 (number of li elements) = 25% */
+      text-align: center;
+      border-right: 1px solid #333; /* for the borders */
+      background: gold;
+    }
+    .nav-bar li:last-child {
+      border: none;
+    }
+    footer {
+      color: #000000;
+      background-image: url("https://loveantech.files.wordpress.com/2024/01/abstract-digital-grid-black-backgrund_53876-97647920705274183268877.jpg");
+      position: relative;/*  required to position the copyright at the bottom */
+      font-size: 80%;
+    }
+    .footer-copyright {
+      width: 100%;
+      height: 40px;
+      background: #ebec73;
+      /* positions the copyright at the bottom of the footer */
+      padding: 10px;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+    .footer-body {
+      margin-bottom: 40px;
+    }
+      /* the clearfix hack */
+    .footer-body::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    /* float the divs */
+    .footer-body > div {
+      float: left;
+      padding: 20px;
+    }
+    /* sets the width of the first column */
+    .footer-body > div:first-child {
+      font-size: 150%;
+      width: 35%;
+      text-align: center;
+    }
+    /* sets the width of the second column */
+    .footer-body > div:last-child {
+      width: 65%;
+    }
+    .footer-body ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+    }
+    .footer-body li > a {
+      color: white;
+      text-decoration: none;
+      margin-bottom: 7px;
+    }
+  *  #button1 {
+      background-color: rgb(23, 52, 89);
+      color: #f8f9f9;
+      box-shadow: .5px .5px 1px 2px #000000;
+    }
+    #button2 {
+      background-color: #921111;
+      color: #ffffff;
+      border: 4px solid ;
+      box-shadow: .5px .5px 1px 2px #000000;
+    }
+    #button1:hover {
+      background-color: #f8f9f9;
+      color: rgb(23, 52, 89);
+      box-shadow: 1px 1px 2px 3px #000000;
+      cursor: pointer;
+    }
+    #button2:hover {
+      background-color: #903C56;
+      color: #f8f9f9;
+      border: 4px solid #903C56;
+      box-shadow: 1px 1px 2px 3px #000000;
+      cursor: pointer;
+    }
+button {
+      font-family: sans-serif;
+      border: none;inp
+      height: 60px;
+      font-size: 15px;
+      outline: none;
+      background: transparent;
+      color: #f8f9f9;
+      background: #191920;
+      border: 1px solid #78969D;
+    }
+    table {
+      border-collapse: collapse;
+      font-family: sans-serif;
+      position: center;
+      width:100%;
+    }
+    table, th, td {
+      border: 1px solid black;
+      
+    }
+    th, td {
+      padding: 5px;
+    
+    }
+    /* the selector below targets th elements inside the thead element and td elements inside the tbody element */
+    thead th, tbody td {
+      text-align: center;
+    }
+    /* the selector below targets td elements inside the tfoot element */
+    tfoot td {
+      text-align: right;
+    }table {
+      border-collapse: collapse;
+      font-family: sans-serif;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 5px;
+
+    }
+    /* the selector below targets th elements inside the thead element and td elements inside the tbody element */
+    thead th, tbody td {
+      text-align: center;
+    }
+    /* the selector below targets td elements inside the tfoot element */
+    tfoot td {
+      text-align: right;
+    
+ {
+      box-sizing: border-box;
+    }
+    .container {
+      margin: 15px;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    .container {
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      padding: 10px;
+      border-bottom: 1px solid black;
+      color: white;
+      background: #0076ff;
+      z-index: 2; /* put it above the accordion content */
+    }
+    .accordion:last-child > label, .accordion:last-child > .accordion-content {
+      border: none;
+    }
+    .accordion-content {
+      border-bottom: 1px solid black;
+      padding: 0;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      z-index: -1;
+      transition: 0.3s linear;
+    }
+    input:checked ~ .accordion-content {
+      padding: 15px;
+      opacity: 1;
+      max-height: 500px;
+      z-index: 1;
+    }
+
+</style>
+<style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+    .image-container {
+      margin: 0 auto; /* center the image containers */
+      width: 80%;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22); /* material box shadow */
+      margin-bottom: 20px;
+      transition-duration: 1s;
+    }
+    .image-container:hover {
+      width: 90%;
+      box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);
+    }
+    /* make the images responsive */
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .image-description {
+      padding: 0 15px 15px 15px;
+      text-align: center;
+    }
+    
+    /* lightbox stylesheet */
+    .lightbox {
+      display: table; /* helps us center the lightbox-content */
+      transition-duration: 1s; /* duration of the fade in effect */
+    
+      /* make the lightbox occupy the entire page */
+      position: fixed;
+      top: -100%; /* hide the lightbox above the top edge */
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
+    }
+    .lightbox:target {
+      top: 0; /* make the lightbox cover the entire page */
+    }
+    .lightbox-content {
+      display: table-cell;
+      vertical-align: middle; /* vertically center */
+      text-align: center; /* horizontally center */
+    }
+    .close {
+      /* position the CLOSE button to the top-right corner */
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    
+      /* style the close button */
+      font-size: 20px;
+      font-weight: 300;
+      text-decoration: none;
+      color: white;
+    }
+    
+    /* make the image responsive */
+    .lightbox img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+     <a href="https://accessmatt.co.ke/categories.html">books/pdfs</a>
+    <a href="https://accessmatt.co.ke/Service.html">sheikhs</a>
+    <a href="https://accessmatt.co.ke/sitemap.html">classess/ masjids</a>
+    <a href="https://accessmatt.co.ke/contact.html">online classes</a>
+    <a href="https://accessmatt.co.ke/contact.html">افوا</a>
+  </div>
+</div>
+      <span  style="width:350px;"class="nav-bar">
+    <ul>
+      <li style="background:black;"><a onclick="openNav()">ENGLISH</a></li>
+      <li style="background:black;"><a href="https://accessmatt.co.ke/">KISWAHILI</a></li>
+      <li style="background:black;"><a href="https://accessmatt.co.ke/User/user.html">ARABIC</a></li>
+      <li><a href="https://accessmatt.co.ke/Cart/cart.html"></a></li>
+    </ul>
+  </span>
+<div class="header">
+  <img class="logo" style="width:350px; height:80px;" src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img-20260718-wa00051616837344773422700.jpg">
+    <div class="nav-bar">
+    <ul>
+      <li style="background:black;"><a onclick="openNav()">&#9776;</a></li>
+      <li><a href="https://accessmatt.co.ke/"><i class="fa fa-home" style="height:100%;"></i></a></li>
+      <li><a href="https://accessmatt.co.ke/User/user.html"><i class="fa fa-user" style="height:100%;"></i></a></li>
+      <li><a href="https://accessmatt.co.ke/Cart/cart.html">&#128214;</a></li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+<input id="searchbar" style="width:90%; background-color:white;" onkeyup="search_animal()" type="text" name="search"  placeholder="Search.."></div>
+<h1 style="text-align:center;">upcoming events</h1>
+
+<video src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/vid_20260719_000303_198.mp4" width="350" height="250" autoplay controls></video><br><br><br>
+<div class="slideshow-container">
+<div class="mySlides fade">
+ <img style="height: 200px; width:100%;" src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img_20260719_002921_927121262230090113608.jpg"/>
+</div>
+<div class="mySlides fade">
+  <img style="height: 200px; width:100%;" src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img_20260719_002734_6337855798178818178806.jpg"/>
+</div>
+<div class="mySlides fade">
+ <img style="height: 200px; width:100%;" src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img_20260719_002921_927121262230090113608.jpg"/>
+</div>
+<div class="mySlides fade">
+  <img style="height: 200px; width:100%;" src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img_20260719_002734_6337855798178818178806.jpg"/>
+  </div>
+<div class="mySlides fade">
+  <img style="height: 200px; width:100%;" src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img_20260719_002921_927121262230090113608.jpg"/>
+  </div>
+</div>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+   <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+<h1 style="text-align: center">LECTURES</h1>
+  <div class="gallery">
+  
+    <div class="image-container" id="container1">
+      <a href="#image1"><img src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img_20260719_163108_2142768831289315888553.jpg" /></a>
+      <h1 class="image-description">MARKAZ SUNNAH NANYUKI</h1>
+    </div>
+  
+    <div class="image-container" id="container2">
+      <a href="#image2"><img src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img_20260719_163047_4965747556426473250937.jpg" /></a>
+      <h1 class="image-description">MARKAZ TAWHEED NANYUKI</h1>
+    </div>
+  
+    <div class="image-container" id="container3">
+      <a href="#image3"><img src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img_20260719_163057_6073259322965304769421.jpg" /></a>
+      <h1 class="image-description">MASJID ABU BAKR MOMBASA</h1>
+    </div>
+  
+    <div class="image-container" id="container4">
+      <a href="#image4"><img src="https://goldcoindata.wordpress.com/wp-content/uploads/2026/07/img_20260719_163043_0607628557886041128691.jpg" /></a>
+      <h1 class="image-description">MASJID UMAR NANYUKI</h1>
+    </div>
+  
+  </div>
+  
+  <div class="lightbox" id="image1">
+    <a href="#" class="close">CLOSE</a>
+    <div class="lightbox-content">
+      <img src="images/road.jpg" />
+    </div>
+  </div>
+  
+  <div class="lightbox" id="image2">
+    <a href="#" class="close">CLOSE</a>
+    <div class="lightbox-content">
+      <img src="images/snow.jpg" />
+    </div>
+  </div>
+  
+  <div class="lightbox" id="image3">
+    <a href="#container3" class="close">CLOSE</a>
+    <div class="lightbox-content">
+      <img src="images/city.jpg" />
+    </div>
+  </div>
+  
+  <div class="lightbox" id="image4">
+    <a href="#container4" class="close">CLOSE</a>
+    <div class="lightbox-content">
+      <img src="images/blue-planet.jpg" />
+    </div>
+  </div>
+<div style="height:auto; text-align:center; background-color: #08801b;">
+ <h1 style="color: gold;">INFOMATION</h1>
+ <a onclick="account()" style="color:#ffffff;"><b>My account</b></a>
+ <hr/>
+  <a onclick="policy()" style="color:#ffffff;"><b>about us</b></a><hr/>
+   <a onclick="contact()" style="color:#ffffff;"><b>Contact Us</b></a></div>
+<div style="height:auto; text-align:center;  background-color: #000000; color:#ffffff;">Copyright 2026 © ahlul sunna Nanyuki,Kenya<br> All Rights Reserved.</div>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "50%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
+</script>
