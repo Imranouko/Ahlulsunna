@@ -1,0 +1,436 @@
+*
+html, body, img{
+  /*   font-size: 60px;*/
+      width: device-width;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    input{height: 40px;}
+  /*  h2 {font-size: 50px;}*/
+ 
+div.scrollmenu {
+  background-color: #ffffff;
+  overflow: auto;
+  white-space: nowrap;
+  font-size:20px;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  width: 40%;
+}
+ body {
+  font-family: 'Lato', sans-serif;
+}
+p,h2 {
+  font-size: 15px;
+}
+#myInput {
+  icon: url('image.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;.
+  top: 15px;
+  right: 35px;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+};
+  .form-container {
+      margin: 20px;
+      padding: 15px;
+      background: #8cabd2;
+      color: white;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    }
+    .input-cnt {
+      display: flex; /* display the icon and the input in a line */
+      margin-bottom: 15px;
+    }
+    .input-cnt:last-child {
+      margin-bottom: 0px;
+    }
+    .input-cnt > i {
+    min-width: 7px; /* set a minimum width for the icon */
+      padding: 10px; /* make sure the icon is centered vertically */
+      text-align: center; /* horizontally center the icon */
+      background: lightgrey;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      color: #0076ff;
+    }
+    /* change styles when focused */
+    .input-cnt:hover > i {
+      background: #0076ff;
+      color: white;
+    }
+    /* style the inputs */
+    /* style the submit button */
+    /* add a hover effect for the submit button
+    .input-cnt > input[type="submit"]:hover {
+      color: white;
+      background: #0076ff;
+    } */
+    header {
+      position: absolute;
+      text-decoration:;
+      color: #3a1cb2;
+      height:auto;
+      width: 100%;
+    }
+    header {
+      font-size: ;
+      text-align: center;
+      background: #c0c1c9;
+    }
+  *{
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ffffffe7;
+    }
+    /*.nav-bar {
+      position: fixed;
+      top: 95px; /* ticks the side nav to the top */
+      left: 0px; /* sticks the side nav to the left side */
+      width: 100%;
+    }
+  header{
+      position: absolute;
+      top: 0px; /* ticks the side nav to the top */
+      left: 0px; /* sticks the side nav to the left side */
+      width:100%;  }
+ */
+    .content {
+      margin-top: 50px;
+    }
+    .content > div {
+      padding: 15px;
+    }
+    .nav-bar a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      /*height: 20px; * sets fixed height */
+      line-height: 30px; /* vertically centers the text */
+    }
+    .nav-bar > ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-bar > ul > li > a {
+      background: black;
+      height: 30p;
+      color:white;
+    }
+    .nav-bar > ul > li > a:hover {
+      background: #173459;
+      color: #f8f9f9;
+    }
+    .nav-bar .active {
+      background: #173459;
+      color: #f8f9f9;
+    }
+    .nav-bar li {
+      height: 30px;
+      float: left;
+      width: 25%; /* 100% / 4 (number of li elements) = 25% */
+      text-align: center;
+      border-right: 1px solid #333; /* for the borders */
+    }
+    .nav-bar li:last-child {
+      border: none;
+    }
+    footer {
+      color: #000000;
+      background-image: url("https://loveantech.files.wordpress.com/2024/01/abstract-digital-grid-black-backgrund_53876-97647920705274183268877.jpg");
+      position: relative;/*  required to position the copyright at the bottom */
+      font-size: 80%;
+    }
+    .footer-copyright {
+      width: 100%;
+      height: 40px;
+      background: #ebec73;
+      /* positions the copyright at the bottom of the footer */
+      padding: 10px;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+    .footer-body {
+      margin-bottom: 40px;
+    }
+      /* the clearfix hack */
+    .footer-body::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    /* float the divs */
+    .footer-body > div {
+      float: left;
+      padding: 20px;
+    }
+    /* sets the width of the first column */
+    .footer-body > div:first-child {
+      font-size: 150%;
+      width: 35%;
+      text-align: center;
+    }
+    /* sets the width of the second column */
+    .footer-body > div:last-child {
+      width: 65%;
+    }
+    .footer-body ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      text-align: center;
+    }
+    .footer-body li > a {
+      color: white;
+      text-decoration: none;
+      margin-bottom: 7px;
+    }
+  *  #button1 {
+      background-color: rgb(23, 52, 89);
+      color: #f8f9f9;
+      box-shadow: .5px .5px 1px 2px #000000;
+    }
+    #button2 {
+      background-color: #921111;
+      color: #ffffff;
+      border: 4px solid ;
+      box-shadow: .5px .5px 1px 2px #000000;
+    }
+    #button1:hover {
+      background-color: #f8f9f9;
+      color: rgb(23, 52, 89);
+      box-shadow: 1px 1px 2px 3px #000000;
+      cursor: pointer;
+    }
+    #button2:hover {
+      background-color: #903C56;
+      color: #f8f9f9;
+      border: 4px solid #903C56;
+      box-shadow: 1px 1px 2px 3px #000000;
+      cursor: pointer;
+    }
+button {
+      font-family: sans-serif;
+      border: none;inp
+      height: 60px;
+      font-size: 15px;
+      outline: none;
+      background: transparent;
+      color: #f8f9f9;
+      background: #191920;
+      border: 1px solid #78969D;
+    }
+    table {
+      border-collapse: collapse;
+      font-family: sans-serif;
+      position: center;
+      width:100%;
+    }
+    table, th, td {
+      border: 1px solid black;
+      
+    }
+    th, td {
+      padding: 5px;
+    
+    }
+    /* the selector below targets th elements inside the thead element and td elements inside the tbody element */
+    thead th, tbody td {
+      text-align: center;
+    }
+    /* the selector below targets td elements inside the tfoot element */
+    tfoot td {
+      text-align: right;
+    }table {
+      border-collapse: collapse;
+      font-family: sans-serif;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 5px;
+
+    }
+    /* the selector below targets th elements inside the thead element and td elements inside the tbody element */
+    thead th, tbody td {
+      text-align: center;
+    }
+    /* the selector below targets td elements inside the tfoot element */
+    tfoot td {
+      text-align: right;
+    
+ {
+      box-sizing: border-box;
+    }
+    .container {
+      margin: 15px;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    .container {
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      padding: 10px;
+      border-bottom: 1px solid black;
+      color: white;
+      background: #0076ff;
+      z-index: 2; /* put it above the accordion content */
+    }
+    .accordion:last-child > label, .accordion:last-child > .accordion-content {
+      border: none;
+    }
+    .accordion-content {
+      border-bottom: 1px solid black;
+      padding: 0;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      z-index: -1;
+      transition: 0.3s linear;
+    }
+    input:checked ~ .accordion-content {
+      padding: 15px;
+      opacity: 1;
+      max-height: 500px;
+      z-index: 1;
+    }
