@@ -15164,19 +15164,19 @@ hadith.getElementsByTagName("p")[6985].innerHTML = safiya[6985]
 hadith.getElementsByTagName("p")[6986].innerHTML = safiya[6986]
 }
 function myFunction() {
- var input, filter, ul, li, a, i, txtValie;
- input = document.getElementById("myInput");
- filter = input.valie.toUpperCase();
- ul = document.getElementById("myUL");
- li = ul.getElementsByTagName("li");
- for (i = 0; i < li.length; i++) {
-a = li[i].getElementsByTagName("p")[0];
-txtValie = a.textContent || a.innerText;
-if (txtValie.toUpperCase().indexOf(filter) > -1) {
-li[i].style.display = "";
-} else {
-li[i].style.display = "none";
-}
- }
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("aisha");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("p")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
 }
 </script>
