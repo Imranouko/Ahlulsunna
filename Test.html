@@ -15195,7 +15195,7 @@ function myFunction() {
     const content = contente+contenta;
     const file = new Blob([content], { type: 'text/plain' });
          link.href = URL.createObjectURL(file);
-         link.download = day+month+year+seconds+".html";
+         link.download = day+""+month+""+year+"-"+seconds+".html";
          link.click();
          URL.revokeObjectURL(link.href);
       };
