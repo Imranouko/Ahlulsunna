@@ -1,3 +1,4 @@
+<button onclick = "downloadFile()"> sanad </button>
 <button onclick="window.print()">sahih al Bukhari</button>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="sanad classification.." title="Type in a name">
 <div id="aisha" style="text-align:right;">
@@ -15180,3 +15181,22 @@ function myFunction() {
     }
 }
 </script>
+
+<script>
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth()+1;
+    const day = date.getDate();
+  const seconds = date.getSeconds();
+    const downloadFile = () => {
+    const link = document.createElement("a");
+    const contenta = document.getElementById("myInput").innerHTML;
+    const contente = document.querySelector("div").innerHTML;
+    const content = contente+contenta;
+    const file = new Blob([content], { type: 'text/plain' });
+         link.href = URL.createObjectURL(file);
+         link.download = day+month+year+seconds+".html";
+         link.click();
+         URL.revokeObjectURL(link.href);
+      };
+   </script>
